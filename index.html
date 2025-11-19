@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRIVE Pro - The Engine of Effort and Discipline (Lutar/Esforçar-se)</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom Font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+        /* Custom styles for line clamping on the cards */
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header id="app-header" class="bg-red-800 shadow-xl p-4 sticky top-0 z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 id="home-link-header" class="text-2xl font-extrabold text-white tracking-widest cursor-pointer hover:text-yellow-400 transition duration-300">
+                STRIVE Pro <span class="text-yellow-400">⚡</span>
+            </h1>
+            <nav class="space-x-4">
+                <button id="home-link-nav" class="text-white font-medium hover:text-yellow-400 transition duration-300 focus:outline-none">
+                    Home / Modules
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="app-content" class="container mx-auto flex-grow p-4 sm:p-6 lg:p-8">
+        <!-- Content will be injected here by JavaScript -->
+        <div class="text-center p-12 text-gray-500">Loading application...</div>
+    </main>
+
+    <!-- Footer - Retains the updated structure but adjusts "THRIVE" to "STRIVE" for theme consistency -->
+    <footer class="bg-red-700 p-4 mt-12">
+        <div class="container mx-auto text-center text-white text-sm">
+            (2025 @ STRIVE by Daby)
+        </div>
+    </footer>
+
+    <script>
+        // --- 1. DATA STRUCTURES (Focused on STRIVING and Effort Metrics) ---
+
+        const lessons = [
+            {
+                id: 1,
+                role: 'Tech Developer',
+                level: 'Júnior',
+                title: 'Striving (Lutar) for Foundation: Focused Effort & Discipline',
+                description: 'This module helps new developers **strive** (**lutar / esforçar-se**) by focusing on the discipline of consistent practice, robust effort tracking, and minimizing time spent in low-value activities.',
+                kpis: [
+                    { name: 'Strive Metric: Consistency Index', description: 'Tracks the percentage of days you meet your minimum focused practice commitment, essential for long-term **striving** (**esforço**).' },
+                    { name: 'Strive Metric: Blocked Time Ratio', description: 'Measures the time successfully dedicated to high-concentration work, proving your ability to **strive** with quality output.' },
+                    { name: 'Strive Metric: Documentation Effort Score', description: 'Ensures that you invest the necessary effort into making your work understandable for future iterations, a core act of **striving**.' },
+                ],
+                scenario: {
+                    title: 'The Daily Grind: Lucas\'s Battle for Consistency',
+                    steps: [
+                        { id: 1, title: 'The Initial Resistance', content: 'Lucas frequently postpones critical learning tasks, making it hard to **strive** (**lutar**) against procrastination and slow down his skill development.', imageAlt: 'Developer looking unfocused' },
+                        { id: 2, title: 'Implementing Consistency', content: 'He starts tracking his **Consistency Index**, committing to 90 minutes of focused effort daily, proving that systematic **striving** (**esforço**) is superior to sporadic bursts.', imageAlt: 'Checklist and calendar' },
+                        { id: 3, title: 'Defending the Block', content: 'By actively protecting his **Blocked Time Ratio** from interruptions and meetings, Lucas increases his feature completion speed, showing intense **striving** pays off.', imageAlt: 'Shield symbol protecting focused time' },
+                        { id: 4, title: 'A Culture of Striving', content: 'Lucas transforms his habits, demonstrating that true professional growth is a result of methodical, daily **striving** (**lutar**) rather than innate talent alone.', imageAlt: 'Graph showing linear, steady growth' },
+                    ],
+                },
+                exercise: [
+                    {
+                        id: 1,
+                        text: "Which action is the best indicator of effective daily **striving** (**esforçar-se**) for a developer?",
+                        options: ["Responding to all emails immediately (Reaction)", "Completing a fixed amount of focused, high-priority work (Action)", "Attending all optional meetings (Activity)", "Working 12 hours straight once per month (Burnout)"],
+                        correctAnswerIndex: 1,
+                        explanation: "Effective **striving** is measured by consistent action on high-priority items. The **Consistency Index** shows commitment to the daily effort (esforço) required for long-term mastery.",
+                    },
+                ],
+            },
+            {
+                id: 2,
+                role: 'Remote Professional',
+                level: 'Sênior',
+                title: 'Striving with Intent: Deep Work Mastery in Remote Settings',
+                description: 'Learn how to **strive** (**lutar**) effectively from anywhere by building systems that maximize **Deep Work** and minimize distractions, ensuring your effort yields premium results.',
+                kpis: [
+                    { name: 'Strive Metric: Distraction Resistance Score', description: 'Measures the duration of uninterrupted, high-cognitive-load work sessions, showing your ability to **strive** against noise.' },
+                    { name: 'Strive Metric: Proactive Preparation Time', description: 'Tracks the effort spent pre-planning tasks to avoid mid-task switching and maintain maximum momentum while **striving**.' },
+                ],
+                scenario: {
+                    title: 'The Home Office Barrier: Sofia\'s Focus Strategy',
+                    steps: [
+                        { id: 1, title: 'The Disrupted Day', content: 'Sofia is constantly interrupted by digital notifications and household noise, severely undermining her ability to **strive** (**esforçar-se**) with quality.', imageAlt: 'Shattered clock face' },
+                        { id: 2, title: 'Establishing Resistance', content: 'She implements strict time-blocking and improves her **Distraction Resistance Score**, proving that setting boundaries is essential to **strive** effectively.', imageAlt: 'Headphones and "Do Not Disturb" sign' },
+                        { id: 3, title: 'Pre-Work Effort', content: 'By increasing her **Proactive Preparation Time** the evening before, Sofia streamlines her morning, making her **striving** (**lutar**) sessions immediately productive.', imageAlt: 'Planner and focused lighting' },
+                        { id: 4, title: 'Mastering Remote Striving', content: 'Sofia achieves peak efficiency, demonstrating that intentional, focused effort (striving) in a remote environment is a skill that must be deliberately cultivated and protected.', imageAlt: 'Graph showing quality output spikes' },
+                    ],
+                },
+                exercise: [
+                    {
+                        id: 1,
+                        text: "In a remote context, where should a professional focus their **striving** effort (esforço) for maximum quality output?",
+                        options: ["On being online and visible all day (Presence)", "On minimizing the number of meetings they attend (Avoidance)", "On maximizing uninterrupted blocks of deep concentration (Focus)", "On using the latest communication software (Tool use)"],
+                        correctAnswerIndex: 2,
+                        explanation: "True **striving** is about high-value output. **Deep concentration** is where the most difficult and valuable work gets done, making it the highest-leverage area for effort (esforço).",
+                    },
+                ],
+            },
+            {
+                id: 3,
+                role: 'Team Lead',
+                level: 'Gerente',
+                title: 'Leading Teams That Strive (Lutam): Clarity and Accountability',
+                description: 'This module teaches you to focus the collective **striving** (**esforço**) of your team by defining clear objectives, maintaining robust accountability, and quickly resolving friction points.',
+                kpis: [
+                    { name: 'Strive Metric: Goal Clarity Index', description: 'Measures how well all team members understand the primary objective of the current sprint or project, essential for aligned **striving**.' },
+                    { name: 'Strive Metric: Intervention-to-Resolution Rate', description: 'Tracks the speed and efficacy with which the lead addresses obstacles and conflicts that impede team **striving** (**luta**).' },
+                ],
+                scenario: {
+                    title: 'Mark\'s Challenge: Turning Confusion into Collective Effort',
+                    steps: [
+                        { id: 1, title: 'Misdirected Effort', content: 'Mark\'s team is working hard, but on different things, failing to **strive** coherently due to vague project definitions and undefined goals.', imageAlt: 'Team members running in different directions' },
+                        { id: 2, title: 'Focusing the Strive', content: 'He introduces a strict Objective process to boost the **Goal Clarity Index**, ensuring all effort is directed toward the same outcome, maximizing collective **striving** (**esforço**).', imageAlt: 'Laser focusing on a single point' },
+                        { id: 3, title: 'Removing Barriers', content: 'By optimizing the **Intervention-to-Resolution Rate**, Mark acts as a blocker-remover, demonstrating leadership by enabling the team to **strive** without unnecessary friction.', imageAlt: 'Wrench and tools fixing a machine' },
+                        { id: 4, title: 'A Striving Machine', content: 'The team consistently delivers, confirming that the leader\'s main effort (striving) is to create the conditions for the team to execute focused, collective effort.', imageAlt: 'Gears turning smoothly together' },
+                    ],
+                },
+                exercise: [
+                    {
+                        id: 1,
+                        text: "Why is the 'Strive Metric: Goal Clarity Index' the most important focus for a team lead?",
+                        options: ["It ensures team members can take more time off (Rest)", "It guarantees higher individual effort on non-priority tasks (Misdirection)", "It ensures maximum leverage by aligning all individual effort (Alignment)", "It reduces the need for all future communication (Silence)"],
+                        correctAnswerIndex: 2,
+                        explanation: "A team's collective **striving** is most powerful when aligned. The **Goal Clarity Index** ensures that every effort (esforço) contributes to the primary goal, preventing wasted energy.",
+                    },
+                ],
+            },
+            {
+                id: 4,
+                role: 'Startup Founder',
+                level: 'Executivo',
+                title: 'Organizational Striving (Lutar/Esforçar-se): Endurance & Grit',
+                description: 'This module addresses the strategic effort required for a company to **strive** (**lutar**) against market forces and uncertainty, prioritizing adaptability and unwavering commitment over short-term gains.',
+                kpis: [
+                    { name: 'Strive Metric: Pivot Attempt Frequency', description: 'Measures how often the organization actively tests significant strategic shifts when faced with stagnation, demonstrating active market **striving**.' },
+                    { name: 'Strive Metric: Cash Runway Resilience', description: 'Tracks the proactive effort to extend financial endurance, recognizing that the ability to **strive** long enough is often the key to success.' },
+                ],
+                scenario: {
+                    title: 'The Strategy Shift: CEO Elena\'s Test of Grit',
+                    steps: [
+                        { id: 1, title: 'The Stagnant Plateau', content: 'Elena\'s company hits a wall; the initial product is failing to gain traction, demanding extraordinary **striving** (**esforçar-se**) to find a new path.', imageAlt: 'Flat line on a graph' },
+                        { id: 2, title: 'Forcing the Pivot', content: 'She dictates a high **Pivot Attempt Frequency**, focusing the team\'s **striving** on rapid experimentation rather than stubbornly defending a failing product.', imageAlt: 'Venn diagram of market overlaps' },
+                        { id: 3, title: 'Buying Time to Strive', content: 'By aggressively managing the **Cash Runway Resilience**, Elena ensures the team has enough time to execute the necessary pivots and **strive** for a new breakthrough.', imageAlt: 'Hourglass with sand running low' },
+                        { id: 4, title: 'The Endurance of Effort', content: 'The company succeeds with the third strategic attempt, proving that the organization\'s capacity to endure and continue **striving** (**lutar**) is the ultimate competitive advantage in the startup world.', imageAlt: 'Mountain peak with a flag' },
+                    ],
+                },
+                exercise: [
+                    {
+                        id: 1,
+                        text: "For a startup founder, what is the core meaning of continuous **striving** (**lutar**)?",
+                        options: ["Having the largest office space (Showmanship)", "Maintaining the ability to continue making calculated efforts in the face of failure (Grit)", "Never changing the original business plan (Rigidity)", "Outspending competitors on marketing (Spending)"],
+                        correctAnswerIndex: 1,
+                        explanation: "Organizational **striving** is defined by **Grit**—the persistence to continue making focused, calculated efforts (esforços) and testing new paths, rather than giving up after initial setbacks.",
+                    },
+                ],
+            },
+        ];
+
+        // --- 2. GLOBAL STATE AND NAVIGATION ---
+        const AppState = {
+            currentPageId: null, // null for Home, ID for Lesson Detail
+            scenarioSteps: {} // Stores the current step for each lesson ID
+        };
+
+        const appContent = document.getElementById('app-content');
+
+        /**
+         * Renders the entire application based on the current state.
+         * @param {number|null} id - The ID of the lesson to navigate to, or null for home.
+         */
+        const navigateTo = (id) => {
+            AppState.currentPageId = id;
+            window.scrollTo(0, 0);
+
+            if (id === null) {
+                renderHome();
+            } else {
+                const lesson = lessons.find(l => l.id === id);
+                if (lesson) {
+                    renderLessonDetail(lesson);
+                } else {
+                    appContent.innerHTML = `<div class="text-center p-12 text-red-500 text-xl">Module not found.</div>`;
+                }
+            }
+        };
+
+        // --- 3. RENDERING FUNCTIONS ---
+
+        /**
+         * Renders the Home View (list of lessons).
+         */
+        const renderHome = () => {
+            const lessonCards = lessons.map(lesson => {
+                let levelClasses = '';
+                if (lesson.level === 'Executivo') {
+                    levelClasses = 'bg-red-100 text-red-800 border-red-500';
+                } else if (lesson.level === 'Gerente') {
+                    levelClasses = 'bg-indigo-100 text-indigo-800 border-indigo-500';
+                } else if (lesson.level === 'Sênior') {
+                    levelClasses = 'bg-yellow-100 text-yellow-800 border-yellow-500';
+                } else {
+                    levelClasses = 'bg-gray-100 text-gray-800 border-gray-500';
+                }
+
+                return `
+                    <div data-id="${lesson.id}" class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1 border-t-4 ${levelClasses} cursor-pointer lesson-card">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">${lesson.role}</h3>
+                            <span class="px-3 py-1 text-xs font-semibold rounded-full shadow-sm ${levelClasses.replace('border-', 'bg-').replace('100', '200')}" style="color: ${levelClasses.match(/text-([a-z]+-\d+)/)[0]}">
+                                ${lesson.level}
+                            </span>
+                        </div>
+                        <h4 class="text-lg font-medium text-red-600 mb-3">${lesson.title}</h4>
+                        <p class="text-sm text-gray-600 mb-4 line-clamp-3">${lesson.description}</p>
+                        <div class="text-xs font-semibold text-red-600 flex items-center">
+                            Start Module to STRIVE (Lutar) &rarr;
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            appContent.innerHTML = `
+                <div class="space-y-8">
+                    <header class="text-center py-8 bg-red-50 rounded-xl shadow-md border-b-4 border-red-200">
+                        <h2 class="text-4xl font-black text-red-800 mb-2">
+                            STRIVE Pro: The Effort Engine ⚡
+                        </h2>
+                        <p class="text-xl text-gray-600">
+                            Select a professional or personal role to start building the **discipline** and **effort** required to achieve your goals.
+                        </p>
+                    </header>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        ${lessonCards}
+                    </div>
+                </div>
+            `;
+
+            // Attach event listeners to the new cards
+            document.querySelectorAll('.lesson-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    const id = parseInt(card.getAttribute('data-id'));
+                    navigateTo(id);
+                });
+            });
+        };
+
+        /**
+         * Renders the Lesson Detail View.
+         * @param {object} lesson
+         */
+        const renderLessonDetail = (lesson) => {
+            const kpiList = lesson.kpis.map((kpi, index) => `
+                <div key="${index}" class="p-4 border border-gray-100 rounded-lg bg-white shadow-sm">
+                    <p class="font-semibold text-lg text-gray-900 flex items-center">
+                        <span class="text-red-500 mr-2 text-2xl">🔥</span> ${kpi.name}
+                    </p>
+                    <p class="text-sm text-gray-600 mt-1">${kpi.description}</p>
+                </div>
+            `).join('');
+
+            appContent.innerHTML = `
+                <div class="space-y-10">
+                    <button id="back-to-list-btn" class="text-red-600 hover:text-red-800 transition duration-200 flex items-center mb-6">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        Back to Modules
+                    </button>
+                    
+                    <header class="text-center py-6 bg-red-600 text-white rounded-xl shadow-xl">
+                        <p class="text-sm font-light uppercase opacity-80">${lesson.role} | Level ${lesson.level}</p>
+                        <h2 class="text-3xl font-black mt-1 mb-2">${lesson.title}</h2>
+                        <p class="text-lg font-medium opacity-90 mx-auto max-w-3xl">
+                            ${lesson.description}
+                        </p>
+                    </header>
+
+                    <!-- Section 1: Core Metrics (KPIs) -->
+                    <div class="bg-white p-6 rounded-xl shadow-xl border-t-4 border-red-500">
+                        <h3 class="text-2xl font-bold text-red-700 mb-4">Core Metrics for Striving (Lutar)</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            ${kpiList}
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Scenario Walkthrough (The STRIVE Walk-through) -->
+                    <div id="scenario-container"></div>
+
+                    <!-- Section 3: Interactive Exercise -->
+                    <div id="exercise-container"></div>
+                </div>
+            `;
+
+            document.getElementById('back-to-list-btn').addEventListener('click', () => navigateTo(null));
+
+            renderScenarioStepper(lesson);
+            renderExercise(lesson);
+        };
+
+        /**
+         * Renders the Scenario Stepper component.
+         * @param {object} lesson
+         */
+        const renderScenarioStepper = (lesson) => {
+            const container = document.getElementById('scenario-container');
+            const lessonId = lesson.id;
+            
+            // Initialize current step for the lesson if not exists
+            if (AppState.scenarioSteps[lessonId] === undefined) {
+                AppState.scenarioSteps[lessonId] = 0;
+            }
+            let currentStep = AppState.scenarioSteps[lessonId];
+            const totalSteps = lesson.scenario.steps.length;
+            const currentStepData = lesson.scenario.steps[currentStep];
+            const progress = ((currentStep + 1) / totalSteps) * 100;
+
+            container.innerHTML = `
+                <div class="bg-white p-6 rounded-xl shadow-xl border border-gray-200">
+                    <h3 class="text-2xl font-bold mb-4 text-red-700">STRIVE Walk-through: ${lesson.scenario.title}</h3>
+                    <p class="text-sm text-gray-500 italic mb-4">A step-by-step guide to applying effort principles so you can **strive** (**lutar / esforçar-se**).</p>
+                    
+                    <!-- Progress Bar -->
+                    <div class="mb-6">
+                        <div class="h-2 bg-gray-200 rounded-full">
+                            <div 
+                                class="h-2 bg-yellow-500 rounded-full transition-all duration-500"
+                                style="width: ${progress}%"
+                            ></div>
+                        </div>
+                        <p class="text-right text-sm text-gray-600 mt-1">Step ${currentStep + 1} of ${totalSteps}</p>
+                    </div>
+                    
+                    <!-- Step Content -->
+                    <div class="p-4 bg-red-50 border-l-4 border-red-500 rounded-lg mb-6">
+                        <h4 class="text-xl font-bold mb-3 text-red-700">${currentStepData.title}</h4>
+                        <p class="text-gray-700 whitespace-pre-line leading-relaxed">${currentStepData.content}</p>
+                    </div>
+                    
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-between">
+                        <button id="prev-step-btn" 
+                            class="px-4 py-2 rounded-full font-medium transition duration-300 shadow-md text-sm
+                            ${currentStep === 0 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-red-600 text-white hover:bg-red-700'}"
+                            ${currentStep === 0 ? 'disabled' : ''}>
+                            &larr; Previous Step
+                        </button>
+                        <button id="next-step-btn" 
+                            class="px-4 py-2 rounded-full font-medium transition duration-300 shadow-md text-sm
+                            ${currentStep === totalSteps - 1 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-indigo-600 text-white hover:bg-indigo-700'}"
+                            ${currentStep === totalSteps - 1 ? 'disabled' : ''}>
+                            ${currentStep === totalSteps - 1 ? 'Walk-through Complete! You are STRIVING (Esforçando-se)!' : 'Next Step \u2192'}
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            // Attach event listeners
+            document.getElementById('prev-step-btn').addEventListener('click', () => {
+                AppState.scenarioSteps[lessonId] = Math.max(currentStep - 1, 0);
+                renderScenarioStepper(lesson);
+            });
+            document.getElementById('next-step-btn').addEventListener('click', () => {
+                AppState.scenarioSteps[lessonId] = Math.min(currentStep + 1, totalSteps - 1);
+                renderScenarioStepper(lesson);
+            });
+        };
+
+
+        /**
+         * Renders the Interactive Exercise component.
+         * @param {object} lesson
+         */
+        const renderExercise = (lesson) => {
+            const container = document.getElementById('exercise-container');
+            const lessonId = lesson.id;
+            const questions = lesson.exercise;
+
+            // Initialize exercise state for the lesson if not exists
+            if (!AppState.exerciseState) AppState.exerciseState = {};
+            if (!AppState.exerciseState[lessonId]) {
+                AppState.exerciseState[lessonId] = {
+                    selectedAnswers: Array(questions.length).fill(null),
+                    submitted: false
+                };
+            }
+
+            let state = AppState.exerciseState[lessonId];
+            const score = questions.filter((q, i) => state.selectedAnswers[i] === q.correctAnswerIndex).length;
+            const isComplete = state.selectedAnswers.every(a => a !== null);
+            
+            const handleSelect = (qIndex, aIndex) => {
+                if (state.submitted) return;
+                state.selectedAnswers[qIndex] = aIndex;
+                renderExercise(lesson); // Re-render to show selection
+            };
+
+            const handleSubmit = () => {
+                state.submitted = true;
+                renderExercise(lesson); // Re-render to show results
+                document.getElementById('exercise-results')?.scrollIntoView({ behavior: 'smooth' });
+            };
+
+            const handleReset = () => {
+                state.submitted = false;
+                state.selectedAnswers = Array(questions.length).fill(null);
+                renderExercise(lesson); // Re-render to reset quiz
+            };
+
+            const scoreDisplay = state.submitted ? `
+                <div id="exercise-results" class="p-4 mb-6 bg-blue-100 border-l-4 border-blue-500 text-blue-700 font-bold text-lg rounded-md">
+                    Your Result: ${score} out of ${questions.length} (${((score / questions.length) * 100).toFixed(0)}%) - Keep striving (lutando)!
+                </div>
+            ` : '';
+
+            const questionMarkup = questions.map((q, qIndex) => {
+                const optionsMarkup = q.options.map((option, aIndex) => {
+                    let optionClasses = '';
+                    let prefix = '';
+                    const isSelected = state.selectedAnswers[qIndex] === aIndex;
+                    const isCorrect = q.correctAnswerIndex === aIndex;
+                    
+                    if (!state.submitted) {
+                        // Not submitted: show hover/selected state
+                        optionClasses = isSelected ? 'bg-red-200 border-red-500 cursor-pointer' : 'hover:bg-gray-50 cursor-pointer';
+                    } else {
+                        // Submitted: show result state
+                        if (isCorrect) {
+                            optionClasses = 'bg-green-100 border-green-500 font-bold';
+                            prefix = '✅ ';
+                        } else if (isSelected) {
+                            optionClasses = 'bg-red-100 border-red-500 font-bold opacity-70';
+                            prefix = '❌ ';
+                        } else {
+                            optionClasses = 'bg-gray-100 opacity-50';
+                        }
+                    }
+
+                    return `
+                        <div 
+                            class="p-3 border rounded-lg transition duration-200 text-sm option-select ${optionClasses}"
+                            data-qindex="${qIndex}" 
+                            data-aindex="${aIndex}"
+                            ${state.submitted ? 'style="pointer-events: none;"' : ''}
+                        >
+                            ${prefix}${option}
+                        </div>
+                    `;
+                }).join('');
+
+                const explanationMarkup = state.submitted ? `
+                    <div class="mt-3 text-sm p-3 bg-gray-50 border-l-2 border-gray-300 rounded-br-lg rounded-bl-lg">
+                        <p class="font-bold text-green-700">Strive Explanation (Explicação sobre Esforço):</p>
+                        <p class="text-gray-600">${q.explanation}</p>
+                    </div>
+                ` : '';
+
+                return `
+                    <div class="mb-8 p-4 border border-gray-200 rounded-lg bg-white shadow-sm">
+                        <p class="font-semibold mb-3 text-lg text-gray-800">
+                            ${qIndex + 1}. ${q.text}
+                        </p>
+                        <div class="space-y-2">
+                            ${optionsMarkup}
+                        </div>
+                        ${explanationMarkup}
+                    </div>
+                `;
+            }).join('');
+            
+            const buttonMarkup = !state.submitted ? `
+                <button
+                    id="submit-quiz-btn"
+                    class="w-full bg-red-600 text-white font-bold py-3 rounded-lg hover:bg-red-700 transition duration-300 ${!isComplete ? 'disabled:bg-gray-400 disabled:cursor-not-allowed' : 'shadow-md'}"
+                    ${!isComplete ? 'disabled' : ''}
+                >
+                    Test Your Knowledge on Striving (Lutar)
+                </button>
+            ` : `
+                <button
+                    id="reset-quiz-btn"
+                    class="w-full bg-blue-600 text-white font-bold py-3 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md"
+                >
+                    Reset Quiz and Re-Strive (Re-Esforçar-se)
+                </button>
+            `;
+
+
+            container.innerHTML = `
+                <div class="mt-8 p-6 bg-yellow-50 rounded-xl shadow-lg border-t-4 border-yellow-500">
+                    <h3 class="text-3xl font-extrabold text-indigo-700 mb-6 border-b pb-2">
+                        Measure Your Effort to Strive (Lutar) 🎯
+                    </h3>
+                    ${scoreDisplay}
+                    ${questionMarkup}
+                    ${buttonMarkup}
+                </div>
+            `;
+
+            // Attach event listeners for selection
+            document.querySelectorAll('.option-select').forEach(optionDiv => {
+                optionDiv.addEventListener('click', (e) => {
+                    const qIndex = parseInt(optionDiv.getAttribute('data-qindex'));
+                    const aIndex = parseInt(optionDiv.getAttribute('data-aindex'));
+                    handleSelect(qIndex, aIndex);
+                });
+            });
+
+            // Attach event listeners for submit/reset
+            if (document.getElementById('submit-quiz-btn')) {
+                document.getElementById('submit-quiz-btn').addEventListener('click', handleSubmit);
+            }
+            if (document.getElementById('reset-quiz-btn')) {
+                document.getElementById('reset-quiz-btn').addEventListener('click', handleReset);
+            }
+        };
+
+
+        // --- 4. INITIALIZATION ---
+
+        window.onload = () => {
+            // Set up universal navigation listeners
+            document.getElementById('home-link-header').addEventListener('click', () => navigateTo(null));
+            document.getElementById('home-link-nav').addEventListener('click', () => navigateTo(null));
+            
+            // Start the application on the home view
+            navigateTo(null);
+        };
+    </script>
+</body>
+</html>
